@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebHunt</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .search {
+      text-align: center;
+      margin: 40px 20px;
+    }
+
+    input {
+      width: 80%;
+      max-width: 500px;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      background: #334155;
+      transform: translateY(-5px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.6;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🔎 WebHunt</h1>
+  <p>Discover useful and hidden websites from the internet</p>
+</header>
+
+<div class="search">
+  <input type="text" placeholder="Search websites, tools, categories...">
+</div>
+
+<div class="categories">
+  <div class="card">🤖 AI Tools</div>
+  <div class="card">📚 Education</div>
+  <div class="card">🎮 Gaming</div>
+  <div class="card">🎨 Design</div>
+  <div class="card">💻 Coding</div>
+  <div class="card">🌍 Hidden Gems</div>
+</div>
+
+<footer>
+  © 2026 WebHunt • Built on GitHub Pages
+</footer>
+
+</body>
+</html>
