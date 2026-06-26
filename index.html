@@ -6,159 +6,8 @@
 
 <title>WebHunt - Discover the Best Websites</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+<link rel="stylesheet" href="css/style.css">
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#0f172a;
-    color:white;
-}
-
-/* Header */
-
-header{
-    background:linear-gradient(135deg,#2563eb,#1e3a8a);
-    text-align:center;
-    padding:70px 20px;
-}
-
-header h1{
-    font-size:52px;
-}
-
-header p{
-    margin-top:15px;
-    font-size:20px;
-    color:#dbeafe;
-}
-
-/* Search */
-
-.search{
-    margin:30px auto;
-    text-align:center;
-}
-
-.search input{
-    width:90%;
-    max-width:600px;
-    padding:15px;
-    border:none;
-    border-radius:10px;
-    font-size:17px;
-}
-
-/* Stats */
-
-.stats{
-    display:flex;
-    justify-content:center;
-    gap:50px;
-    flex-wrap:wrap;
-    margin:30px;
-}
-
-.stats div{
-    text-align:center;
-}
-
-.stats h2{
-    color:#60a5fa;
-    font-size:36px;
-}
-
-.stats p{
-    color:#cbd5e1;
-}
-
-/* Sections */
-
-section{
-    max-width:1100px;
-    margin:auto;
-    padding:20px;
-}
-
-section h2{
-    margin-bottom:20px;
-    font-size:30px;
-}
-
-/* Grid */
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-/* Cards */
-
-.card{
-    background:#1e293b;
-    color:white;
-    text-decoration:none;
-    border-radius:15px;
-    padding:25px;
-    transition:.3s;
-    display:block;
-}
-
-.card:hover{
-    background:#2563eb;
-    transform:translateY(-6px);
-}
-
-.card h3{
-    margin:10px 0;
-    font-size:22px;
-}
-
-.card p{
-    color:#cbd5e1;
-    font-size:14px;
-    line-height:1.5;
-}
-
-.icon{
-    font-size:42px;
-}
-
-/* Footer */
-
-footer{
-    margin-top:60px;
-    background:#111827;
-    text-align:center;
-    padding:25px;
-    color:#94a3b8;
-}
-
-/* Animation */
-
-.card{
-    animation:fade .6s;
-}
-
-@keyframes fade{
-
-from{
-opacity:0;
-transform:translateY(20px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-</style>
 </head>
 
 <body>
@@ -201,7 +50,11 @@ placeholder="Search categories...">
 
 <section>
 
-<h2>Browse Categories</h2>
+<h2>Explore Categories</h2>
+
+<p class="section-text">
+Choose a category to discover useful websites.
+</p>
 
 <div class="grid">
 
@@ -220,13 +73,13 @@ placeholder="Search categories...">
 <a class="card" href="entertainment.html">
 <div class="icon">🎬</div>
 <h3>Entertainment</h3>
-<p>Movies, TV shows, streaming and media websites.</p>
+<p>Movies, TV shows and streaming websites.</p>
 </a>
 
 <a class="card" href="fun.html">
 <div class="icon">🎉</div>
 <h3>Fun</h3>
-<p>Time-killing websites and fun internet discoveries.</p>
+<p>Interesting and fun websites to explore.</p>
 </a>
 
 <a class="card" href="games.html">
@@ -238,13 +91,13 @@ placeholder="Search categories...">
 <a class="card" href="sports.html">
 <div class="icon">🏏</div>
 <h3>Sports</h3>
-<p>Live scores, news and sports streaming.</p>
+<p>Sports news, scores and streaming.</p>
 </a>
 
 <a class="card" href="vpn.html">
 <div class="icon">🔐</div>
 <h3>VPN</h3>
-<p>Privacy, security and VPN services.</p>
+<p>Privacy and security tools.</p>
 </a>
 
 <a class="card" href="livetv.html">
@@ -256,13 +109,13 @@ placeholder="Search categories...">
 <a class="card" href="educational.html">
 <div class="icon">📚</div>
 <h3>Educational</h3>
-<p>Learning platforms, courses and study resources.</p>
+<p>Courses, tutorials and learning websites.</p>
 </a>
 
 <a class="card" href="books.html">
 <div class="icon">📖</div>
 <h3>Books</h3>
-<p>Read books, novels and educational material online.</p>
+<p>Read books and educational material online.</p>
 </a>
 
 </div>
@@ -271,7 +124,7 @@ placeholder="Search categories...">
 
 <footer>
 
-© 2026 WebHunt • Built with ❤️ using HTML, CSS & JavaScript
+© 2026 WebHunt • Built with ❤️
 
 </footer>
 
@@ -281,16 +134,12 @@ const search=document.getElementById("search");
 
 search.addEventListener("keyup",function(){
 
-let filter=search.value.toLowerCase();
+const value=search.value.toLowerCase();
 
-let cards=document.querySelectorAll(".grid .card");
+document.querySelectorAll(".grid .card").forEach(function(card){
 
-cards.forEach(function(card){
-
-if(card.innerText.toLowerCase().includes(filter))
-card.style.display="block";
-else
-card.style.display="none";
+card.style.display=card.innerText.toLowerCase().includes(value)
+?"block":"none";
 
 });
 
