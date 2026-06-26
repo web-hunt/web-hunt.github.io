@@ -1,44 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Tools - WebHunt</title>
 
 <style>
-body {
-  font-family: Arial;
-  background: #0f172a;
-  color: white;
-  margin: 0;
-  padding: 20px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.card {
-  background: #1e293b;
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 10px;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0f172a;
+    color:white;
 }
 
-a {
-  color: #60a5fa;
-  text-decoration: none;
+header{
+    background:linear-gradient(135deg,#2563eb,#1e3a8a);
+    text-align:center;
+    padding:50px 20px;
 }
 
+header h1{
+    font-size:42px;
+}
+
+header p{
+    margin-top:10px;
+    color:#dbeafe;
+}
+
+.back{
+    display:inline-block;
+    margin-top:20px;
+    color:white;
+    text-decoration:none;
+    border:1px solid rgba(255,255,255,.3);
+    padding:10px 18px;
+    border-radius:8px;
+}
+
+.back:hover{
+    background:white;
+    color:#2563eb;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:30px 20px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+}
+
+.card h2{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#cbd5e1;
+    line-height:1.5;
+    margin-bottom:15px;
+}
+
+.button{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:10px 18px;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+.button:hover{
+    background:#1d4ed8;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#111827;
+    color:#94a3b8;
+    margin-top:50px;
+}
 </style>
 </head>
 
 <body>
 
+<header>
+
 <h1>🤖 AI Tools</h1>
 
-<div class="card">1. (Your website here)</div>
-<div class="card">2. (Your website here)</div>
-<div class="card">3. (Your website here)</div>
-<div class="card">4. (Your website here)</div>
-<div class="card">5. (Your website here)</div>
+<p>Discover useful AI websites.</p>
 
-<br>
-<a href="index.html">⬅ Back to Home</a>
+<a class="back" href="index.html">← Back to Home</a>
+
+</header>
+
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
+<h2>ChatGPT</h2>
+<p>AI assistant for writing, coding, learning, brainstorming and much more.</p>
+<a class="button" href="https://chatgpt.com" target="_blank">Visit Website</a>
+</div>
+
+<div class="card">
+<h2>Gemini</h2>
+<p>Google's AI assistant that helps with writing, research and coding.</p>
+<a class="button" href="https://gemini.google.com" target="_blank">Visit Website</a>
+</div>
+
+<div class="card">
+<h2>Claude</h2>
+<p>An AI assistant focused on writing, analysis and long conversations.</p>
+<a class="button" href="https://claude.ai" target="_blank">Visit Website</a>
+</div>
+
+<div class="card">
+<h2>Perplexity</h2>
+<p>AI-powered search engine that answers questions with cited sources.</p>
+<a class="button" href="https://www.perplexity.ai" target="_blank">Visit Website</a>
+</div>
+
+<div class="card">
+<h2>Canva AI</h2>
+<p>Create presentations, images and social media content using AI.</p>
+<a class="button" href="https://www.canva.com" target="_blank">Visit Website</a>
+</div>
+
+<div class="card">
+<h2>Photopea</h2>
+<p>Free browser-based image editor similar to Photoshop.</p>
+<a class="button" href="https://www.photopea.com" target="_blank">Visit Website</a>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 WebHunt
+</footer>
 
 </body>
 </html>
