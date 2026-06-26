@@ -3,65 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WebHunt</title>
+
+<title>WebHunt - Discover the Best Websites</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial;
-  background: #0f172a;
-  color: white;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-header {
-  background: linear-gradient(135deg, #2563eb, #1e40af);
-  padding: 50px;
-  text-align: center;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0f172a;
+    color:white;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 42px;
+/* Header */
+
+header{
+    background:linear-gradient(135deg,#2563eb,#1e3a8a);
+    text-align:center;
+    padding:70px 20px;
 }
 
-.search {
-  text-align: center;
-  margin: 20px;
+header h1{
+    font-size:52px;
 }
 
-.search input {
-  width: 80%;
-  max-width: 500px;
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
+header p{
+    margin-top:15px;
+    font-size:20px;
+    color:#dbeafe;
 }
 
-.categories {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 15px;
-  padding: 20px;
-  max-width: 1000px;
-  margin: auto;
+/* Search */
+
+.search{
+    margin:30px auto;
+    text-align:center;
 }
 
-.card {
-  background: #1e293b;
-  padding: 15px;
-  text-align: center;
-  border-radius: 10px;
-  transition: 0.2s;
+.search input{
+    width:90%;
+    max-width:600px;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    font-size:17px;
 }
 
-.card:hover {
-  transform: translateY(-3px);
-  background: #334155;
+/* Stats */
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
+    margin:30px;
 }
 
-a {
-  color: #60a5fa;
-  text-decoration: none;
+.stats div{
+    text-align:center;
+}
+
+.stats h2{
+    color:#60a5fa;
+    font-size:36px;
+}
+
+.stats p{
+    color:#cbd5e1;
+}
+
+/* Sections */
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+section h2{
+    margin-bottom:20px;
+    font-size:30px;
+}
+
+/* Grid */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+/* Cards */
+
+.card{
+    background:#1e293b;
+    color:white;
+    text-decoration:none;
+    border-radius:15px;
+    padding:25px;
+    transition:.3s;
+    display:block;
+}
+
+.card:hover{
+    background:#2563eb;
+    transform:translateY(-6px);
+}
+
+.card h3{
+    margin:10px 0;
+    font-size:22px;
+}
+
+.card p{
+    color:#cbd5e1;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.icon{
+    font-size:42px;
+}
+
+/* Footer */
+
+footer{
+    margin-top:60px;
+    background:#111827;
+    text-align:center;
+    padding:25px;
+    color:#94a3b8;
+}
+
+/* Animation */
+
+.card{
+    animation:fade .6s;
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
 }
 </style>
 </head>
@@ -69,34 +164,167 @@ a {
 <body>
 
 <header>
-  <h1>🔎 WebHunt</h1>
+
+<h1>🔎 WebHunt</h1>
+
+<p>Discover the best websites on the Internet.</p>
+
 </header>
 
 <div class="search">
-  <input type="text" placeholder="Search websites...">
+
+<input
+type="text"
+id="search"
+placeholder="Search categories...">
+
 </div>
 
-<section class="categories">
+<div class="stats">
 
-  <a class="card" href="utilities.html">🛠 Utilities</a>
-  <a class="card" href="ai.html">🤖 AI Tools</a>
-  <a class="card" href="entertainment.html">🎬 Entertainment</a>
-  <a class="card" href="fun.html">🎉 Fun</a>
-  <a class="card" href="games.html">🎮 Games</a>
-  <a class="card" href="sports.html">🏏 Sports</a>
-  <a class="card" href="vpn.html">🔐 VPN</a>
-  <a class="card" href="livetv.html">📺 Live TV</a>
-  <a class="card" href="educational.html">📚 Educational</a>
-  <a class="card" href="books.html">📖 Books</a>
+<div>
+<h2>10+</h2>
+<p>Categories</p>
+</div>
+
+<div>
+<h2>100+</h2>
+<p>Websites</p>
+</div>
+
+<div>
+<h2>Free</h2>
+<p>Forever</p>
+</div>
+
+</div>
+
+<section>
+
+<h2>Browse Categories</h2>
+
+<div class="grid">
+
+<a class="card" href="utilities.html">
+<div class="icon">🛠</div>
+<h3>Utilities</h3>
+<p>Converters, PDF tools, calculators, file tools and more.</p>
+</a>
+
+<a class="card" href="ai.html">
+<div class="icon">🤖</div>
+<h3>AI Tools</h3>
+<p>Chatbots, image generators, coding assistants and more.</p>
+</a>
+
+<a class="card" href="entertainment.html">
+<div class="icon">🎬</div>
+<h3>Entertainment</h3>
+<p>Movies, TV shows, streaming and media websites.</p>
+</a>
+
+<a class="card" href="fun.html">
+<div class="icon">🎉</div>
+<h3>Fun</h3>
+<p>Time-killing websites and fun internet discoveries.</p>
+</a>
+
+<a class="card" href="games.html">
+<div class="icon">🎮</div>
+<h3>Games</h3>
+<p>Online games and gaming resources.</p>
+</a>
+
+<a class="card" href="sports.html">
+<div class="icon">🏏</div>
+<h3>Sports</h3>
+<p>Live scores, news and sports streaming.</p>
+</a>
+
+<a class="card" href="vpn.html">
+<div class="icon">🔐</div>
+<h3>VPN</h3>
+<p>Privacy, security and VPN services.</p>
+</a>
+
+<a class="card" href="livetv.html">
+<div class="icon">📺</div>
+<h3>Live TV</h3>
+<p>Watch television channels online.</p>
+</a>
+
+<a class="card" href="educational.html">
+<div class="icon">📚</div>
+<h3>Educational</h3>
+<p>Learning platforms, courses and study resources.</p>
+</a>
+
+<a class="card" href="books.html">
+<div class="icon">📖</div>
+<h3>Books</h3>
+<p>Read books, novels and educational material online.</p>
+</a>
+
+</div>
 
 </section>
 
-</body>
-</html></div>
+<section>
+
+<h2>⭐ Featured Websites</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">🤖</div>
+<h3>ChatGPT</h3>
+<p>AI assistant for writing, coding, learning and everyday questions.</p>
+</div>
+
+<div class="card">
+<div class="icon">🎨</div>
+<h3>Canva</h3>
+<p>Create presentations, social media posts and graphic designs.</p>
+</div>
+
+<div class="card">
+<div class="icon">🖼️</div>
+<h3>Photopea</h3>
+<p>A free online photo editor similar to Photoshop.</p>
+</div>
+
+</div>
+
+</section>
 
 <footer>
-  © 2026 WebHunt • Built on GitHub Pages
+
+© 2026 WebHunt • Built with ❤️ using HTML, CSS & JavaScript
+
 </footer>
+
+<script>
+
+const search=document.getElementById("search");
+
+search.addEventListener("keyup",function(){
+
+let filter=search.value.toLowerCase();
+
+let cards=document.querySelectorAll(".grid .card");
+
+cards.forEach(function(card){
+
+if(card.innerText.toLowerCase().includes(filter))
+card.style.display="block";
+else
+card.style.display="none";
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
