@@ -1,154 +1,4 @@
 /* ===========================
-   RESET
-=========================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-/* ===========================
-   BODY
-=========================== */
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#0b0b0b;
-    color:#ffffff;
-    line-height:1.6;
-}
-
-/* ===========================
-   HEADER
-=========================== */
-
-header{
-    background:linear-gradient(135deg,#b30000,#3d0000);
-    text-align:center;
-    padding:70px 20px;
-    box-shadow:0 4px 20px rgba(255,0,0,.25);
-}
-
-header h1{
-    font-size:52px;
-}
-
-header p{
-    margin-top:15px;
-    font-size:20px;
-    color:#f5c2c2;
-}
-
-/* ===========================
-   NAVIGATION
-=========================== */
-
-nav{
-    margin-top:30px;
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    padding:10px 18px;
-    border-radius:8px;
-    transition:.3s;
-}
-
-nav a:hover{
-    background:#cc0000;
-}
-
-/* ===========================
-   SEARCH
-=========================== */
-
-.search{
-    text-align:center;
-    margin:35px auto;
-}
-
-.search input{
-    width:90%;
-    max-width:600px;
-    padding:15px;
-    border:2px solid #990000;
-    border-radius:10px;
-    font-size:17px;
-    outline:none;
-    background:#1a1a1a;
-    color:white;
-}
-
-.search input:focus{
-    border-color:#ff2d2d;
-    box-shadow:0 0 12px rgba(255,0,0,.4);
-}
-
-/* ===========================
-   STATS
-=========================== */
-
-.stats{
-    display:flex;
-    justify-content:center;
-    gap:50px;
-    flex-wrap:wrap;
-    margin:40px 20px;
-}
-
-.stats div{
-    text-align:center;
-}
-
-.stats h2{
-    color:#ff3b3b;
-    font-size:36px;
-}
-
-.stats p{
-    color:#cccccc;
-}
-
-/* ===========================
-   SECTIONS
-=========================== */
-
-section{
-    max-width:1100px;
-    margin:auto;
-    padding:20px;
-}
-
-section h2{
-    font-size:30px;
-    margin-bottom:10px;
-    color:#ff4040;
-}
-
-.section-text{
-    color:#bdbdbd;
-    margin-bottom:25px;
-}
-
-/* ===========================
-   GRID
-=========================== */
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
-    align-items:stretch;
-}
-
-/* ===========================
    WEBSITE CARD
 =========================== */
 
@@ -159,10 +9,6 @@ section h2{
     padding:25px;
     transition:.3s;
     animation:fade .5s;
-
-    display:flex;
-    flex-direction:column;
-    height:100%;
 }
 
 .card:hover{
@@ -184,17 +30,6 @@ section h2{
 .card p{
     color:#cfcfcf;
     margin-top:10px;
-    flex-grow:1;
-}
-
-/* ===========================
-   RATING
-=========================== */
-
-.rating{
-    color:#ffd700;
-    font-size:18px;
-    margin:10px 0;
 }
 
 /* ===========================
@@ -206,7 +41,6 @@ section h2{
     flex-wrap:wrap;
     gap:10px;
     margin:20px 0;
-    min-height:40px;
 }
 
 .tag{
@@ -230,43 +64,9 @@ section h2{
     border-radius:8px;
     font-weight:bold;
     transition:.3s;
-
-    margin-top:auto;
-    align-self:flex-start;
 }
 
 .button:hover{
     background:#ff1a1a;
     box-shadow:0 0 15px rgba(255,0,0,.5);
 }
-
-/* ===========================
-   FOOTER
-=========================== */
-
-footer{
-    margin-top:60px;
-    padding:25px;
-    text-align:center;
-    background:#111111;
-    color:#9a9a9a;
-    border-top:1px solid #330000;
-}
-
-/* ===========================
-   ANIMATION
-=========================== */
-
-@keyframes fade{
-
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
-   }
